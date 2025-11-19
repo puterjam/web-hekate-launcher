@@ -19,20 +19,26 @@
       <h3>Payload</h3>
       <div class="payload-options">
         <form id="mainForm">
-          <div class="radio-group">
-            <input type="radio" name="payload" id="hekate.bin" value="hekate.bin" checked>
-            <label for="hekate.bin">Hekate payload (hekate_ctcaer_6.4.0.bin)</label>
-          </div>
+          <div class="payload-layout">
+            <div class="payload-left">
+              <div class="radio-group">
+                <input type="radio" name="payload" id="hekate.bin" value="hekate.bin" checked>
+                <label for="hekate.bin">Hekate payload (hekate_ctcaer_6.4.0.bin)</label>
+              </div>
 
-          <div class="radio-group">
-            <input type="radio" name="payload" id="fusee.bin" value="fusee.bin" >
-            <label for="fusee.bin">Fusee payload (fusee.bin)</label>
-          </div>
+              <div class="radio-group">
+                <input type="radio" name="payload" id="fusee.bin" value="fusee.bin" >
+                <label for="fusee.bin">Fusee payload (fusee.bin)</label>
+              </div>
+            </div>
 
-          <div class="radio-group">
-            <input type="radio" name="payload" id="uploaded" value="uploaded">
-            <label for="uploaded">Upload custom payload:</label>
-            <input type="file" id="payloadUpload" accept=".bin">
+            <div class="payload-right">
+              <div class="radio-group">
+                <input type="radio" name="payload" id="uploaded" value="uploaded">
+                <label for="uploaded">Upload custom payload:</label>
+                <input type="file" id="payloadUpload" accept=".bin">
+              </div>
+            </div>
           </div>
         </form>
       </div>
