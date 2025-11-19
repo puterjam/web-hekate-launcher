@@ -1,63 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Hekate Launcher</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Hekate Launcher</title>
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="icon" type="image/png" href="./favicon.png">
-  <link rel="stylesheet" href="./style.css">
-</head>
+  <body>
+    <div class="container">
+      <h1>Web Hekate Launcher</h1>
+      <p class="subtitle">
+        Hekate & Fusee Launcher ported to JavaScript using WebUSB
+      </p>
+      <div class="section">
+        <h3>Payload</h3>
+        <div class="payload-options">
+          <form id="mainForm">
+            <div class="payload-layout">
+              <div class="payload-left">
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="payload"
+                    id="hekate.bin"
+                    value="hekate.bin"
+                    checked
+                  />
+                  <label for="hekate.bin"
+                    >Hekate payload (hekate_ctcaer_6.4.0.bin)</label
+                  >
+                </div>
 
-<body>
-  <div class="container">
-    <h1>Web Hekate Launcher</h1>
-    <p class="subtitle">Hekate & Fusee Launcher ported to JavaScript using WebUSB</p>
-
-    <div class="section">
-      <h3>Payload</h3>
-      <div class="payload-options">
-        <form id="mainForm">
-          <div class="payload-layout">
-            <div class="payload-left">
-              <div class="radio-group">
-                <input type="radio" name="payload" id="hekate.bin" value="hekate.bin" checked>
-                <label for="hekate.bin">Hekate payload (hekate_ctcaer_6.4.0.bin)</label>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="payload"
+                    id="fusee.bin"
+                    value="fusee.bin"
+                  />
+                  <label for="fusee.bin">Fusee payload (fusee.bin)</label>
+                </div>
               </div>
 
-              <div class="radio-group">
-                <input type="radio" name="payload" id="fusee.bin" value="fusee.bin" >
-                <label for="fusee.bin">Fusee payload (fusee.bin)</label>
+              <div class="payload-right">
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="payload"
+                    id="uploaded"
+                    value="uploaded"
+                  />
+                  <label for="uploaded">Upload custom payload:</label>
+                  <input type="file" id="payloadUpload" accept=".bin" />
+                </div>
               </div>
             </div>
+          </form>
+        </div>
 
-            <div class="payload-right">
-              <div class="radio-group">
-                <input type="radio" name="payload" id="uploaded" value="uploaded">
-                <label for="uploaded">Upload custom payload:</label>
-                <input type="file" id="payloadUpload" accept=".bin">
-              </div>
-            </div>
-          </div>
-        </form>
+        <button id="goButton">Launch Payload</button>
       </div>
 
-      <button id="goButton">Launch Payload</button>
+      <div class="section">
+        <h3>Output</h3>
+        <textarea
+          id="output"
+          placeholder="Output will appear here..."
+          readonly
+        ></textarea>
+      </div>
     </div>
-
-    <div class="section">
-      <h3>Output</h3>
-      <textarea id="output" placeholder="Output will appear here..." readonly></textarea>
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
     </div>
-  </div>
-  <div class="ocean">
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
-  <script src="./fusee.bin.js"></script>
-  <script src="./hekate.bin.js"></script>
-  <script src="./main.js"></script>
-</body>
-
+    <script src="./fusee.bin.js"></script>
+    <script src="./hekate.bin.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>
